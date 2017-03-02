@@ -1,6 +1,6 @@
 {
   "name": "mailgunee",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Preview your emails sent through mailgun",
   "author": "Kostas Bariotis <konmpar@gmail.com>",
   "license": "MIT",
@@ -17,10 +17,6 @@
   "bin": {
     "mailgunee": "./bin/index.js"
   },
-  "files": [
-    "lib",
-    "src"
-  ],
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
