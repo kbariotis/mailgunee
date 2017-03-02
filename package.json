@@ -1,6 +1,6 @@
 {
   "name": "mailgunee",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Preview your emails sent through mailgun",
   "author": "Kostas Bariotis <konmpar@gmail.com>",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run build"
   },
   "bin": {
-    "mailgunee": "./cli/index.js"
+    "mailgunee": "./bin/index.js"
   },
   "files": [
     "lib",
