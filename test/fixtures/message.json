@@ -1,0 +1,60 @@
+{
+  "X-Mailgun-Drop-Message": "false",
+  "Received": "by luna.mailgun.net with HTTP; Wed, 01 Mar 2017 20:50:21 +0000",
+  "stripped-signature": "",
+  "Message-Id": "<20170301205021.121209.12239.A6A44ABF@gityeller.com>",
+  "from": "no-reply@gityeller.com",
+  "sender": "no-reply@gityeller.com",
+  "recipients": "konmpar@gmail.com",
+  "Subject": "Hey! I've found a new issue",
+  "Content-Transfer-Encoding": "7bit",
+  "attachments": [],
+  "To": "konmpar@gmail.com",
+  "body-html": "\nHello there!<br/><br/>\nI've found a new issue with label \"v7.x\" from\nthe nodejs/node repository.<br/><br/>\n\n<a href=\"https://github.com/nodejs/node/pull/11638\">7.7.1 Proposal</a><br/>\n<br/>\nCheers!<br/><br/>\n\nGitYeller\n\n<hr>\n<small>Unsubscribe from future emails like this, <a href=\"https://gityeller.com/api/unsubscribe/58867a156c4aec7d7fd4774e\">here</a>.</small>\n    ",
+  "stripped-html": "\nHello there!<br/><br/>\nI've found a new issue with label \"v7.x\" from\nthe nodejs/node repository.<br/><br/>\n\n<a href=\"https://github.com/nodejs/node/pull/11638\">7.7.1 Proposal</a><br/>\n<br/>\nCheers!<br/><br/>\n\nGitYeller\n\n<hr>\n<small>Unsubscribe from future emails like this, <a href=\"https://gityeller.com/api/unsubscribe/58867a156c4aec7d7fd4774e\">here</a>.</small>\n    ",
+  "content-id-map": {},
+  "stripped-text": "Hello there! \nI've found a new issue with label \"v7.x\" fromthe nodejs/node repository. \n7.7.1 Proposal (https://github.com/nodejs/node/pull/11638) \nCheers! \nGitYeller \nUnsubscribe from future emails like this, here. (https://gityeller.com/api/unsubscribe/58867a156c4aec7d7fd4774e)",
+  "From": "no-reply@gityeller.com",
+  "message-headers": [
+    [
+      "Received",
+      "by luna.mailgun.net with HTTP; Wed, 01 Mar 2017 20:50:21 +0000"
+    ],
+    [
+      "Message-Id",
+      "<20170301205021.121209.12239.A6A44ABF@gityeller.com>"
+    ],
+    [
+      "X-Mailgun-Drop-Message",
+      "false"
+    ],
+    [
+      "To",
+      "konmpar@gmail.com"
+    ],
+    [
+      "From",
+      "no-reply@gityeller.com"
+    ],
+    [
+      "Subject",
+      "Hey! I've found a new issue"
+    ],
+    [
+      "Content-Type",
+      "text/html; charset=\"ascii\""
+    ],
+    [
+      "Mime-Version",
+      "1.0"
+    ],
+    [
+      "Content-Transfer-Encoding",
+      "7bit"
+    ]
+  ],
+  "Mime-Version": "1.0",
+  "Content-Type": "text/html; charset=\"ascii\"",
+  "body-plain": "Hello there! \nI've found a new issue with label \"v7.x\" fromthe nodejs/node repository. \n7.7.1 Proposal (https://github.com/nodejs/node/pull/11638) \nCheers! \nGitYeller \nUnsubscribe from future emails like this, here. (https://gityeller.com/api/unsubscribe/58867a156c4aec7d7fd4774e)",
+  "subject": "Hey! I've found a new issue"
+}

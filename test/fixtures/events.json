@@ -1,0 +1,270 @@
+{
+  "items": [
+    {
+      "tags": [],
+      "envelope": [
+        null
+      ],
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "recipient-domain": "gmail.com",
+      "id": "tFnEVJQ_Tze3cn-axGA3ig",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "timestamp": 1488401806.37272,
+      "message": [
+        null
+      ],
+      "recipient": "konmpar@gmail.com",
+      "event": "delivered",
+      "delivery-status": [
+        null
+      ]
+    },
+    {
+      "tags": [],
+      "timestamp": 1488401422.019119,
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "envelope": [
+        null
+      ],
+      "recipient-domain": "gmail.com",
+      "method": "http",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "id": "RuWCaEv_SLGuGiwtfEMd1w",
+      "message": [
+        null
+      ],
+      "recipient": "konmpar@gmail.com",
+      "event": "accepted"
+    },
+    {
+      "tags": [],
+      "envelope": [
+        null
+      ],
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "recipient-domain": "gmail.com",
+      "id": "wdSVUNZGRA-ciq9OCHmYAA",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "timestamp": 1488384524.234709,
+      "message": [
+        null
+      ],
+      "recipient": "evandrix@gmail.com",
+      "event": "delivered",
+      "delivery-status": [
+        null
+      ]
+    },
+    {
+      "tags": [],
+      "timestamp": 1488383878.259339,
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "envelope": [
+        null
+      ],
+      "recipient-domain": "gmail.com",
+      "method": "http",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "id": "gtLOu9yKTcCd9zGRDK6f_A",
+      "message": [
+        null
+      ],
+      "recipient": "evandrix@gmail.com",
+      "event": "accepted"
+    },
+    {
+      "tags": [],
+      "envelope": [
+        null
+      ],
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "recipient-domain": "gmail.com",
+      "id": "ngqjg16tT_C9ySaz_VJ1lQ",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "timestamp": 1488379700.81772,
+      "message": [
+        null
+      ],
+      "recipient": "konmpar@gmail.com",
+      "event": "delivered",
+      "delivery-status": [
+        null
+      ]
+    },
+    {
+      "tags": [],
+      "envelope": [
+        null
+      ],
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "recipient-domain": "mozilla.com",
+      "id": "qyTA4V5-Twa8_i6pVbYrlw",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "timestamp": 1488379319.780709,
+      "message": [
+        null
+      ],
+      "recipient": "christos@mozilla.com",
+      "event": "delivered",
+      "delivery-status": [
+        null
+      ]
+    },
+    {
+      "tags": [],
+      "timestamp": 1488379316.839847,
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "envelope": [
+        null
+      ],
+      "recipient-domain": "mozilla.com",
+      "method": "http",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "id": "rvv3_VYpRGWc_YCeDxE1hQ",
+      "message": [
+        null
+      ],
+      "recipient": "christos@mozilla.com",
+      "event": "accepted"
+    },
+    {
+      "tags": [],
+      "timestamp": 1488379301.219792,
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "envelope": [
+        null
+      ],
+      "recipient-domain": "gmail.com",
+      "method": "http",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "id": "iDNieCmnSdOLGtI56P08zA",
+      "message": [
+        null
+      ],
+      "recipient": "konmpar@gmail.com",
+      "event": "accepted"
+    },
+    {
+      "tags": [],
+      "envelope": [
+        null
+      ],
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "recipient-domain": "gmail.com",
+      "id": "Q6_GXuRkQi6Jjy_zUXbuPg",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "timestamp": 1488360473.334736,
+      "message": [
+        null
+      ],
+      "recipient": "konmpar@gmail.com",
+      "event": "delivered",
+      "delivery-status": [
+        null
+      ]
+    },
+    {
+      "tags": [],
+      "timestamp": 1488360472.43507,
+      "storage": {
+    "url": "https://sw.api.mailgun.net/v3/domains/gityeller.com/messages/eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0=",
+    "key": "eyJwIjpmYWxzZSwiayI6ImExZDAyYTEyLWFlYjYtNDM2Yy05ZTkyLTA1YzI1MjcwYjJlOCIsInMiOiIzY2MwYjk1Mzc5IiwiYyI6InRhbmtiIn0="
+  },
+      "envelope": [
+        null
+      ],
+      "recipient-domain": "gmail.com",
+      "method": "http",
+      "campaigns": [],
+      "user-variables": {},
+      "flags": [
+        null
+      ],
+      "log-level": "info",
+      "id": "FE3rCzwnRo6R7Vx-il1KWQ",
+      "message": [
+        null
+      ],
+      "recipient": "konmpar@gmail.com",
+      "event": "accepted"
+    }
+  ],
+  "paging": {
+    "next": "https://api.mailgun.net/v3/gityeller.com/events/W3siYiI6ICIyMDE3LTAzLTAyVDA…dpdHllbGxlci5jb20iXV0sIDEwLCAibWVzc2FnZSNGRTNyQ3p3blJvNlI3VngtaWwxS1dRIl0=",
+    "last": "https://api.mailgun.net/v3/gityeller.com/events/W3siYiI6ICIyMDE3LTAzLTAyVDA…Y4ZGY1OGVlIl0sIFsiZG9tYWluLm5hbWUiLCAiZ2l0eWVsbGVyLmNvbSJdXSwgMTAsIG51bGxd",
+    "first": "https://api.mailgun.net/v3/gityeller.com/events/W3siYiI6ICIyMDE3LTAzLTAyVDA…RmNThlZSJdLCBbImRvbWFpbi5uYW1lIiwgImdpdHllbGxlci5jb20iXV0sIDEwLCBudWxsXQ==",
+    "previous": "https://api.mailgun.net/v3/gityeller.com/events/W3siYiI6ICIyMDE3LTAzLTAyVDA…l0eWVsbGVyLmNvbSJdXSwgMTAsICJtZXNzYWdlI3RGbkVWSlFfVHplM2NuLWF4R0EzaWciXQ=="
+  }
+}
