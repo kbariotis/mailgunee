@@ -1,10 +1,14 @@
 {
   "name": "mailgunee",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Preview your emails sent through mailgun",
-  "author": "Kostas Bariotis <konmpar@gmail.com>",
+  "author": "Kostas Bariotis <konmpar@gmail.com> (https://kostasbariotis.com)",
   "license": "MIT",
   "main": "./lib/index.js",
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/kbariotis/mailgunee.git"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive --require babel-polyfill",
@@ -14,6 +18,10 @@
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run build"
   },
+  "engines": {
+    "node": ">=4"
+  },
+  "preferGlobal": true,
   "bin": {
     "mailgunee": "./bin/index.js"
   },
