@@ -12,16 +12,34 @@ let domain = ''
 let baseMessagesUrl = ''
 let baseDomainsUrl = ''
 
+let apiKeyFile = '.mailgunee'
+
+/**
+ * Orchestrate the CLI interface
+ */
+const run = async () => {
+  apiKey = await setup()
+
+  baseDomainsUrl = `https://api:${apiKey}@api.mailgun.net/v3/domains`
+  domain = await renderDomains()
+
+  baseMessagesUrl = `https://api:${apiKey}@api.mailgun.net/v3/${domain}/events?limit=10`
+  renderMessages()
+}
+
+/**
+ * Initial setup to get the API key
+ */
 const setup = async () => {
-  const file = `${os.homedir()}/.mailgun-previewer`
+  const file = `${os.homedir()}/${apiKeyFile}`
 
   let key = null
 
   try {
     key = fs.readFileSync(file)
   } catch (e) {
-    console.log('This is the first time you are using Mailgun previewer')
-    console.log('You need to provide the API key (stored in ~/.mailgun-previewer')
+    console.log(`This is the first time you are using Mailgun previewer`)
+    console.log(`You need to provide the API key (stored in ~/${apiKeyFile})`)
 
     const answer = await inquirer.prompt([{
       type: 'input',
@@ -39,6 +57,47 @@ const setup = async () => {
   }
 
   return key
+}
+
+/**
+ * Render domains list
+ */
+const renderDomains = async (url = baseDomainsUrl) => {
+  const eventsBody = await request(url)
+
+  let items = eventsBody.items.map(item => item.name)
+
+  return await renderDomainsList(items)
+}
+
+/**
+ * Render messages list
+ *
+ * Will recursively call itself if user chooses not to exit
+ */
+const renderMessages = async (url = baseMessagesUrl) => {
+  const eventsBody = await request(url)
+
+  let items = eventsBody.items
+  const presentedItems = formatOptions(items).concat(['more'])
+
+  const selection = await renderMessagesList(presentedItems)
+
+  if (selection === 'more') {
+    renderMessages(`${baseMessagesUrl}&begin=${items[items.length - 1].timestamp}`)
+  } else {
+    const url = getSelectionUrl(items, selection)
+
+    const messageBody = await request(`${url}`)
+
+    console.log(messageBody['body-html'])
+
+    const exit = await renderConfirmationToExit()
+
+    if (!exit) {
+      renderMessages()
+    }
+  }
 }
 
 const formatDate = date => {
@@ -101,49 +160,6 @@ const renderConfirmationToExit = () => inquirer.prompt([{
   message: 'Quit now?',
   default: false
 }]).then(answer => answer.exit)
-
-const renderDomains = async (url = baseDomainsUrl) => {
-  const eventsBody = await request(url)
-
-  let items = eventsBody.items.map(item => item.name)
-
-  return await renderDomainsList(items)
-}
-
-const renderMessages = async (url = baseMessagesUrl) => {
-  const eventsBody = await request(url)
-
-  let items = eventsBody.items
-  const presentedItems = formatOptions(items).concat(['more'])
-
-  const selection = await renderMessagesList(presentedItems)
-
-  if (selection === 'more') {
-    renderMessages(`${baseMessagesUrl}&begin=${items[items.length - 1].timestamp}`)
-  } else {
-    const url = getSelectionUrl(items, selection)
-
-    const messageBody = await request(`${url}`)
-
-    console.log(messageBody['body-html'])
-
-    const exit = await renderConfirmationToExit()
-
-    if (!exit) {
-      renderMessages()
-    }
-  }
-}
-
-const run = async () => {
-  apiKey = await setup()
-
-  baseDomainsUrl = `https://api:${apiKey}@api.mailgun.net/v3/domains`
-  domain = await renderDomains()
-
-  baseMessagesUrl = `https://api:${apiKey}@api.mailgun.net/v3/${domain}/events?limit=10`
-  renderMessages()
-}
 
 export {
   renderMessages,
