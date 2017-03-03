@@ -84,6 +84,12 @@ const renderMessages = async (url = baseMessagesUrl) => {
   const eventsBody = await request(url)
 
   let items = eventsBody.items
+
+  if (!items.length) {
+    console.log('There are no messages to preview.')
+    return
+  }
+
   const presentedItems = formatOptions(items).concat(['More'])
 
   const selection = await renderMessagesList(presentedItems)
