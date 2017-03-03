@@ -6,6 +6,9 @@ import os from 'os'
 import r from 'request'
 import inquirer from 'inquirer'
 import {Spinner} from 'cli-spinner'
+import chalk from 'chalk'
+
+const log = console.log
 
 let apiKey = ''
 let domain = ''
@@ -45,8 +48,10 @@ const setup = async () => {
   try {
     key = fs.readFileSync(file)
   } catch (e) {
-    console.log(`This is the first time you are using Mailgun previewer`)
-    console.log(`You need to provide the API key (stored in ~/${apiKeyFile})`)
+    log(`
+This is the first time you are using mailgunee. ${chalk.bold('Thank you for checking it out!')}
+You need to provide your API key (stored in ~/${apiKeyFile}).
+`)
 
     const answer = await inquirer.prompt([{
       type: 'input',
@@ -59,7 +64,7 @@ const setup = async () => {
     try {
       fs.writeFileSync(file, key)
     } catch (e) {
-      console.log(e)
+      log(`${chalk.bold('Oh no!')}, e`)
     }
   }
 
@@ -86,7 +91,7 @@ const renderMessages = async (url = baseMessagesUrl) => {
   let items = eventsBody.items
 
   if (!items.length) {
-    console.log('There are no messages to preview.')
+    chalk.bold('There are no messages to preview.')
     return
   }
 
@@ -101,7 +106,10 @@ const renderMessages = async (url = baseMessagesUrl) => {
 
     const messageBody = await request(`${url}`)
 
-    console.log(messageBody['body-html'])
+    log(`
+${chalk.bold(messageBody['Subject'])}
+${messageBody['stripped-html']}
+    `)
   }
 }
 
@@ -118,17 +126,29 @@ const formatDate = date => {
 
 const request = url => {
   return new Promise((resolve, reject) => {
-    const spinner = new Spinner('processing.. %s')
+    const spinner = new Spinner('Wait.. %s')
+
     spinner.setSpinnerString('|/-\\')
     spinner.start()
 
     r(`${url}`, (err, response) => {
       spinner.stop()
-      console.log('\x1Bc')
+
+      log('\x1Bc') // clear the terminal
+
       if (err) {
         reject(err)
       } else {
-        resolve(JSON.parse(response.body))
+        let body = null
+
+        try {
+          body = JSON.parse(response.body)
+        } catch (e) {
+          reject(e)
+          return
+        }
+
+        resolve(body)
       }
     })
   })
@@ -146,7 +166,7 @@ const getSelectionUrl = (items, selection) => {
 const renderMessagesList = (messages) => inquirer.prompt([{
   type: 'list',
   name: 'message',
-  message: 'Choose a message to render',
+  message: 'Choose a message to preview',
   choices: messages,
   paginated: false,
   pageSize: 11

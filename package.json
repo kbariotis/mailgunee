@@ -5,7 +5,7 @@
   "author": "Kostas Bariotis <konmpar@gmail.com> (https://kostasbariotis.com)",
   "license": "MIT",
   "main": "./lib/index.js",
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/kbariotis/mailgunee.git"
   },
@@ -49,6 +49,7 @@
     "babel": "^6.5.2",
     "babel-core": "^6.23.1",
     "babel-polyfill": "^6.23.0",
+    "chalk": "^1.1.3",
     "cli-spinner": "^0.2.6",
     "inquirer": "^3.0.5",
     "request": "^2.79.0"
