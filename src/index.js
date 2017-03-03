@@ -21,10 +21,17 @@ const run = async () => {
   apiKey = await setup()
 
   baseDomainsUrl = `https://api:${apiKey}@api.mailgun.net/v3/domains`
-  domain = await renderDomains()
+  let domainsList = await fetchDomains()
 
+  domain = await renderDomainsList(domainsList)
   baseMessagesUrl = `https://api:${apiKey}@api.mailgun.net/v3/${domain}/events?limit=10`
-  renderMessages()
+  await renderMessages()
+
+  const exit = await renderConfirmationToExit()
+
+  if (!exit) {
+    run()
+  }
 }
 
 /**
@@ -62,12 +69,10 @@ const setup = async () => {
 /**
  * Render domains list
  */
-const renderDomains = async (url = baseDomainsUrl) => {
+const fetchDomains = async (url = baseDomainsUrl) => {
   const eventsBody = await request(url)
 
-  let items = eventsBody.items.map(item => item.name)
-
-  return await renderDomainsList(items)
+  return eventsBody.items.map(item => item.name)
 }
 
 /**
@@ -79,24 +84,18 @@ const renderMessages = async (url = baseMessagesUrl) => {
   const eventsBody = await request(url)
 
   let items = eventsBody.items
-  const presentedItems = formatOptions(items).concat(['more'])
+  const presentedItems = formatOptions(items).concat(['More'])
 
   const selection = await renderMessagesList(presentedItems)
 
-  if (selection === 'more') {
-    renderMessages(`${baseMessagesUrl}&begin=${items[items.length - 1].timestamp}`)
+  if (selection === 'More') {
+    await renderMessages(`${baseMessagesUrl}&begin=${items[items.length - 1].timestamp}`)
   } else {
     const url = getSelectionUrl(items, selection)
 
     const messageBody = await request(`${url}`)
 
     console.log(messageBody['body-html'])
-
-    const exit = await renderConfirmationToExit()
-
-    if (!exit) {
-      renderMessages()
-    }
   }
 }
 
@@ -143,7 +142,8 @@ const renderMessagesList = (messages) => inquirer.prompt([{
   name: 'message',
   message: 'Choose a message to render',
   choices: messages,
-  paginated: false
+  paginated: false,
+  pageSize: 11
 }]).then(answer => answer.message)
 
 const renderDomainsList = (domains) => inquirer.prompt([{
@@ -151,7 +151,8 @@ const renderDomainsList = (domains) => inquirer.prompt([{
   name: 'domain',
   message: 'Choose a domain',
   choices: domains,
-  paginated: false
+  paginated: false,
+  pageSize: 20
 }]).then(answer => answer.domain)
 
 const renderConfirmationToExit = () => inquirer.prompt([{
