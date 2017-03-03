@@ -1,13 +1,16 @@
 # mailgunee
 
-I like [mailgun](https://mailgun.com). But not having a way
-to preview sent emails bodies is the least fun process ever.
+I like [mailgun](https://mailgun.com). Yet [this](http://blog.mailgun.com/how-to-view-your-messages/)
+is the least fun process ever. I am constantly finding my self trying to see what an email I sent
+looked like.
 
-I also refuse to accept that the only way to do it [is this](http://blog.mailgun.com/how-to-view-your-messages/).
+I thought I could help by creating this CLI tool.
 
-I thought I could help by creating this CLI.
+[![asciicast](https://asciinema.org/a/esjweil163e4ns4r6dvebnqxs.png)](https://asciinema.org/a/esjweil163e4ns4r6dvebnqxs)
 
 ## Install
+
+**Requires Node > 4.***
 
 Just install:
 
