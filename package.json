@@ -1,6 +1,6 @@
 {
   "name": "mailgunee",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "Preview your emails sent through mailgun",
   "author": "Kostas Bariotis <konmpar@gmail.com> (https://kostasbariotis.com)",
   "license": "MIT",
